@@ -25,7 +25,7 @@ public:
 	virtual bool CanApply(rage::netObject* object) { return false; }            // 0xA8
 	virtual int GetPlayersInScope() { return -1; }                              // 0xB0
 	virtual void DeserializeImpl() {}                                           // 0xB8 need to verify later
-	virtual void SerializeImpl() {}                                             // 0xC0 need to verify later
+	virtual void Serialize(rage::netObject* object, rage::datBitBuffer* buffer, void* logger, bool read) {}                                             // 0xC0 need to verify later
 	virtual int CalculateSize2() { return 0; }                                  // 0xC8
 	virtual int _0xD0() { return 0; }                                           // 0xD0 calls NodeCommonDataOperations::Unk()
 	virtual void Log() {}                                                       // 0xD8
